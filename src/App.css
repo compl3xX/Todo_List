@@ -1,0 +1,17 @@
+* {
+  margin: 0px;
+}
+
+.MainWindow {
+
+  height: 100vh;
+
+  background-color: rgb(99, 238, 57);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+  
+}
