@@ -1,4 +1,5 @@
 import { createContext, useReducer } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 export const TodoContext = createContext();
 
@@ -18,6 +19,25 @@ const todoReducer = (state, action) => {
                     text: action.text
                 }
             ]
+
+        case 'DEL_TODO':
+
+            const delTodos = state.filter((s) => {
+                return action.id !== s.id
+            })
+
+            return delTodos;
+
+        case 'UPDATE_TODO':
+
+            const updateTodos = state.map((s) => {
+                if (action.id === s.id) {
+                      const newText=action.text
+                }
+            })
+
+
+
 
 
 
@@ -45,6 +65,6 @@ export const TodoProvider = ({ children }) => {
 
 
 const initialTasks = [
-    { id: 0, text: 'Make WebApp' },
-    { id: 1, text: 'Make Project List' }
+    { id: uuidv4(), text: 'Make WebApp' },
+    { id: uuidv4(), text: 'Make Project List' }
 ]

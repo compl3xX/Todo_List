@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react'
 import { TodoDispatchContext } from "../context/context";
-
+import { v4 as uuidv4 } from 'uuid';
 
 const InputTask = () => {
 
@@ -27,9 +27,11 @@ const InputTask = () => {
             <button onClick={() => {
                 setInputValue('')
                 dispatch({
+
                     type: "ADD_TODO",
                     text: inputValue,
-                    id: id++
+                    id: uuidv4()
+                    
                 })
             }}>ADD</button>
         </>
