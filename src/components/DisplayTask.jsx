@@ -1,11 +1,14 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { TodoContext } from "../context/context"
 import { TodoDispatchContext } from "../context/context";
+import EditTask from "./EditTask";
 
 
 const DisplayTask = () => {
 
     const todos = useContext(TodoContext)
+
+    const [editing, setEditing] = useState(false)
 
     const dispatch = useContext(TodoDispatchContext)
 
@@ -17,12 +20,21 @@ const DisplayTask = () => {
         })
     }
 
-    const editHandler = (id) => {
-        dispatch({
-            type: "UPDATE_TODO",
-            id: id
-        })
+    const startEditing = (item) => {
+
+        item.isEditing = true;
+
+        setEditing(true)
+
+
+        // dispatch({
+        //     type: "UPDATE_TODO",
+        //     id: id
+        // })
+
     }
+
+
 
 
     return (
@@ -30,8 +42,7 @@ const DisplayTask = () => {
             {todos.map((todo) => {
                 return (
                     <li key={todo.id}>
-                        {todo.text}
-                        <button onClick={() => editHandler(todo.id)}>Edit</button>
+                        <EditTask item={todo} />
                         <button onClick={() => delHandler(todo.id)}>Del</button>
                     </li>
                 )

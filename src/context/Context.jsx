@@ -32,7 +32,7 @@ const todoReducer = (state, action) => {
 
             const updateTodos = state.map((s) => {
                 if (action.id === s.id) {
-                      const newText=action.text
+                    const newText = action.text
                 }
             })
 
@@ -65,6 +65,6 @@ export const TodoProvider = ({ children }) => {
 
 
 const initialTasks = [
-    { id: uuidv4(), text: 'Make WebApp' },
-    { id: uuidv4(), text: 'Make Project List' }
+    { id: uuidv4(), text: 'Make WebApp', isEditing: false },
+    { id: uuidv4(), text: 'Make Project List', isEditing: false }
 ]
