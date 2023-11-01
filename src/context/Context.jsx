@@ -1,9 +1,11 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 export const TodoContext = createContext();
 
 export const TodoDispatchContext = createContext();
+
+export const TodoFilterContext = createContext();
 
 const todoReducer = (state, action) => {
 
@@ -53,15 +55,22 @@ const todoReducer = (state, action) => {
 }
 
 
+
+
 export const TodoProvider = ({ children }) => {
 
     const [todos, dispatch] = useReducer(todoReducer, initialTasks)
 
+    const [filter, setFilter] = useState('All')
+
+    console.log(filter)
     return (
 
         <TodoContext.Provider value={todos} >
             <TodoDispatchContext.Provider value={dispatch}>
-                {children}
+                <TodoFilterContext.Provider value={{ filter, setFilter }}>
+                    {children}
+                </TodoFilterContext.Provider>
             </TodoDispatchContext.Provider>
         </TodoContext.Provider >
 
@@ -75,3 +84,4 @@ const initialTasks = [
     { id: uuidv4(), text: 'Make WebApp', isDone: true },
     { id: uuidv4(), text: 'Make Project List', isDone: false }
 ]
+

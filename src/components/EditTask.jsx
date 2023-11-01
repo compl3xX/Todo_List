@@ -4,7 +4,9 @@ import './style.css'
 
 const EditTask = ({ item }) => {
 
-  //  const [isDone, setIsDone] = useState(false);
+
+
+    //  const [isDone, setIsDone] = useState(false);
 
     const [isEditing, setIsEditing] = useState(false);
 
@@ -40,7 +42,7 @@ const EditTask = ({ item }) => {
     }
 
     const taskDone = (id) => {
-       
+
         dispatch({
             type: "UPDATE_TODO",
             id: id,
@@ -70,7 +72,7 @@ const EditTask = ({ item }) => {
                             <input
                                 type='checkbox'
                                 checked={item.isDone}
-                                onChange={()=>{taskDone(item.id)}}
+                                onChange={() => { taskDone(item.id) }}
                             />
                             <span className={item.isDone ? "strikethrough" : ""}>{item.text}</span>
                             <button onClick={startEditing}>Edit</button>
