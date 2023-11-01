@@ -1,5 +1,5 @@
 import { useContext} from 'react'
-import { TodoContext } from "../context/context"
+import { TodoContext } from "../context/Context"
 import EditTask from "./EditTask";
 
 

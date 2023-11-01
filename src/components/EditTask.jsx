@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { TodoDispatchContext } from "../context/context";
+import { TodoDispatchContext } from "../context/Context";
 import './style.css'
 
 const EditTask = ({ item }) => {
