@@ -40,7 +40,7 @@ const EditTask = ({ item }) => {
     }
 
     const taskDone = (id) => {
-       // setIsDone(true);
+       
         dispatch({
             type: "UPDATE_TODO",
             id: id,
@@ -70,7 +70,7 @@ const EditTask = ({ item }) => {
                             <input
                                 type='checkbox'
                                 checked={item.isDone}
-                                onChange={taskDone}
+                                onChange={()=>{taskDone(item.id)}}
                             />
                             <span className={item.isDone ? "strikethrough" : ""}>{item.text}</span>
                             <button onClick={startEditing}>Edit</button>

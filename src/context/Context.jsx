@@ -17,7 +17,7 @@ const todoReducer = (state, action) => {
                 {
                     id: action.id,
                     text: action.text,
-                    isDone:action.isDone
+                    isDone: action.isDone
                 }
             ]
 
@@ -31,14 +31,18 @@ const todoReducer = (state, action) => {
 
         case 'UPDATE_TODO':
 
-            const updateTodos = state.map((s) => {
+            const updateTodos = state.map((todo) => {
 
-                if (action.id === s.id) {
-                    if(action.text)s.text = action.text
-                    if(action.isDone)s.isDone = action.isDone
+                if (action.id === todo.id) {
+                    return {
+                        ...todo,
+                        isDone: action.isDone !== undefined ? action.isDone : todo.isDone,
+                        text: action.text !== undefined ? action.text : todo.text,
+                        // Add more properties as needed
+                    };
+                } else {
+                    return todo; // Return the original todo item if the ID doesn't match
                 }
-
-                return s
             })
 
             return updateTodos
