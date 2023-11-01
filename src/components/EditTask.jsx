@@ -39,15 +39,15 @@ const EditTask = ({ item }) => {
         setIsEditing(false)
     }
 
-    // const taskDone = (id) => {
-    //    // setIsDone(true);
-    //     dispatch({
-    //         type: "UPDATE_TODO",
-    //         id: id,
-    //         isDone: !item.isDone
-    //     })
+    const taskDone = (id) => {
+       // setIsDone(true);
+        dispatch({
+            type: "UPDATE_TODO",
+            id: id,
+            isDone: !item.isDone
+        })
 
-    // }
+    }
 
 
     return (
@@ -67,11 +67,11 @@ const EditTask = ({ item }) => {
                     </>)
                     : (
                         <>
-                            {/* <input
+                            <input
                                 type='checkbox'
                                 checked={item.isDone}
                                 onChange={taskDone}
-                            /> */}
+                            />
                             <span className={item.isDone ? "strikethrough" : ""}>{item.text}</span>
                             <button onClick={startEditing}>Edit</button>
                             <button onClick={() => delHandler(item.id)}>Del</button>

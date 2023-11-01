@@ -30,7 +30,8 @@ const InputTask = () => {
 
                     type: "ADD_TODO",
                     text: inputValue,
-                    id: uuidv4()
+                    id: uuidv4(),
+                    isDone:false
                     
                 })
             }}>ADD</button>

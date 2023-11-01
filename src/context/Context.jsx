@@ -16,7 +16,8 @@ const todoReducer = (state, action) => {
                 ...state,
                 {
                     id: action.id,
-                    text: action.text
+                    text: action.text,
+                    isDone:action.isDone
                 }
             ]
 
@@ -33,8 +34,8 @@ const todoReducer = (state, action) => {
             const updateTodos = state.map((s) => {
 
                 if (action.id === s.id) {
-                    s.text = action.text
-                    //s.isDone = action?.isDone
+                    if(action.text)s.text = action.text
+                    if(action.isDone)s.isDone = action.isDone
                 }
 
                 return s
