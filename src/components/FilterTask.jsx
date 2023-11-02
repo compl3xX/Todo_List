@@ -21,9 +21,9 @@ const FilterTask = () => {
             {
                 isOpen && (
                     <ul>
-                        <li onClick={() => { setFilter('ALL') }}>All</li>
+                        <button onClick={() => { setFilter('ALL') }}>All</button>
                         <button onClick={() => { setFilter('Completed') }}>Completed</button>
-                        <li onClick={() => { setFilter('Incomplete') }}>Incomplete</li>
+                        <button onClick={() => { setFilter('Incomplete') }}>Incomplete</button>
                     </ul>
                 )
             }
