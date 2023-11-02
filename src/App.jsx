@@ -1,6 +1,6 @@
 import './App.css'
 import MainContainer from "./components/MainContainer"
-import { TodoProvider } from "./context/Context.jsx"
+import { TodoProvider } from "./context/Context"
 
 function App() {
   return (
