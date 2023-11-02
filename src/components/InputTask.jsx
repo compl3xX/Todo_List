@@ -8,23 +8,19 @@ const InputTask = () => {
 
     const dispatch = useContext(TodoDispatchContext)
 
-    const inputStyle = {
-        fontSize: '16px',
-        padding: '10px',
-        border: '1px solid #ccc',
-        borderRadius: '5px',
-    };
+
 
     return (
-        <>
+        <div className="InputTask">
             <input
                 type="text"
                 value={inputValue}
                 onChange={(e) => { setInputValue(e.target.value) }}
                 placeholder="Add your todo..."
-                style={inputStyle}
+
+
             />
-            <button onClick={() => {
+            <button className="my-button" onClick={() => {
                 setInputValue('')
                 dispatch({
 
@@ -35,7 +31,7 @@ const InputTask = () => {
 
                 })
             }}>ADD</button>
-        </>
+        </div>
     )
 }
 

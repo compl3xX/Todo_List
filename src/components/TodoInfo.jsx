@@ -16,7 +16,7 @@ const TodoInfo = () => {
 
 
     return (
-        <div>
+        <div className="Todo-info">
             <FilterTask />
             <>
                 <span>Task Done :- {DoneTask}</span>

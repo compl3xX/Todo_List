@@ -1,12 +1,9 @@
 import React, { useState, useContext } from 'react'
 import { TodoDispatchContext } from "../context/Context";
-import './style.css'
+import './style.scss'
 
 const EditTask = ({ item }) => {
 
-
-
-    //  const [isDone, setIsDone] = useState(false);
 
     const [isEditing, setIsEditing] = useState(false);
 
@@ -54,19 +51,24 @@ const EditTask = ({ item }) => {
 
     return (
 
-        <>
+        <div className="list-items-item">
             {
                 isEditing
 
-                    ? (<>
-                        <input
-                            type='text'
-                            value={text}
-                            onChange={(e) => { setText(e.target.value) }} />
-                        <button onClick={() => { saveEdit(item.id) }}>Save</button>
-                        <button onClick={() => { cancelEdit(item.id) }}>Cancel</button>
+                    ? (
+                        <div className="list-items-item-Edit">
 
-                    </>)
+                            <input
+                                type='text'
+                                value={text}
+                                onChange={(e) => { setText(e.target.value) }}
+                            />
+                            <div>
+                                <button onClick={() => { saveEdit(item.id) }}>Save</button>
+                                <button onClick={() => { cancelEdit(item.id) }}>Cancel</button>
+                            </div>
+
+                        </div>)
                     : (
                         <>
                             <input
@@ -75,12 +77,14 @@ const EditTask = ({ item }) => {
                                 onChange={() => { taskDone(item.id) }}
                             />
                             <span className={item.isDone ? "strikethrough" : ""}>{item.text}</span>
-                            <button onClick={startEditing}>Edit</button>
-                            <button onClick={() => delHandler(item.id)}>Del</button>
+                            <div>
+                                <button onClick={startEditing}>Edit</button>
+                                <button onClick={() => delHandler(item.id)}>Del</button>
+                            </div>
                         </>
                     )
             }
-        </>
+        </div>
 
     )
 }

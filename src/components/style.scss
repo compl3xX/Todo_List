@@ -1,0 +1,77 @@
+.container {
+  border: 2px solid red;
+  border-radius: 10px;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin-top: 2vh;
+  }
+}
+
+.InputTask {
+  margin-top: 5vh;
+  display: flex;
+  input {
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0px 0px 5px;
+    width: 60vh;
+  }
+}
+
+.my-button {
+  background-color: rgb(186, 181, 181);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  height: 100%;
+  border-radius: 0px 5px 5px 0px;
+
+  &:hover {
+    background-color: #9a9b9d;
+  }
+}
+
+.Todo-info {
+  margin-top: 5vh;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-items {
+  margin-top: 5vh;
+  list-style: none;
+  width: 85%;
+  
+}
+
+.list-items-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  border: 2px solid black;
+  padding: 2px;
+  background-color: grey;
+  span {
+    width: 200px;
+  }
+}
+
+.list-items-item-Edit {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}

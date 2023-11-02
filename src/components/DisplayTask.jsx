@@ -3,6 +3,7 @@ import { TodoContext, TodoFilterContext } from "../context/Context"
 import EditTask from "./EditTask";
 
 
+
 const DisplayTask = () => {
 
     const todos = useContext(TodoContext)
@@ -22,7 +23,8 @@ const DisplayTask = () => {
 
 
     return (
-        <ul style={{ listStyle: "none" }} >
+
+        <div className="list-items" >
             {filteredTodos.map((todo) => {
                 return (
                     <li key={todo.id}>
@@ -31,7 +33,7 @@ const DisplayTask = () => {
                 )
             })}
 
-        </ul>
+        </div>
     )
 }
 
