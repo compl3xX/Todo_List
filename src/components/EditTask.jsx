@@ -76,7 +76,7 @@ const EditTask = ({ item }) => {
                                 checked={item.isDone}
                                 onChange={() => { taskDone(item.id) }}
                             />
-                            <span className={item.isDone ? "strikethrough" : ""}>{item.text}</span>
+                            <span style={{textAlign:'center'}} className={item.isDone ? "strikethrough" : ""}>{item.text}</span>
                             <div>
                                 <button onClick={startEditing}>Edit</button>
                                 <button onClick={() => delHandler(item.id)}>Del</button>

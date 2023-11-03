@@ -18,7 +18,7 @@ const TodoInfo = () => {
     return (
         <div className="Todo-info">
             <FilterTask />
-
+          
             <div>Task Done :- {DoneTask}</div>
             <div> Total Tasks :- {todos.length}</div>
 
