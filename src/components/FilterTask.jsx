@@ -16,8 +16,13 @@ const FilterTask = () => {
 
 
     return (
+<<<<<<< Updated upstream
         <>
             <button onClick={toggleList}>Filter</button>
+=======
+        <div>
+            <button style={{ width: '7vw',backgroundColor: "rgb(186, 181, 181)" }} onClick={toggleList}>Filter</button>
+>>>>>>> Stashed changes
             {
                 isOpen && (
                     <ul>

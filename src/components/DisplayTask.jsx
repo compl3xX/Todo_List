@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { TodoContext, TodoFilterContext } from "../context/Context"
+import {  TodoContext, TodoFilterContext } from "../context/Context"
 import EditTask from "./EditTask";
 
 
@@ -16,7 +16,7 @@ const DisplayTask = () => {
         } else if (filter === 'Incomplete') {
             return !task.isDone;
         }
-        return true;
+            return true;
     });
 
 
