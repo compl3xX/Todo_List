@@ -14,6 +14,10 @@
   }
 }
 
+input{
+  outline: none;
+}
+
 .InputTask {
   margin-top: 5vh;
   display: flex;
@@ -77,3 +81,4 @@
 .strikethrough {
   text-decoration: line-through;
 }
+
