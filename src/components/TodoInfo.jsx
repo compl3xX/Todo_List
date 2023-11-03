@@ -19,8 +19,8 @@ const TodoInfo = () => {
         <div className="Todo-info">
             <FilterTask />
 
-            <span>Task Done :- {DoneTask}</span>
-            <span> Total Tasks :- {todos.length}</span>
+            <div>Task Done :- {DoneTask}</div>
+            <div> Total Tasks :- {todos.length}</div>
 
         </div>
     )
