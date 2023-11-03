@@ -66,10 +66,6 @@ const todoReducer = (state, action) => {
 
             return updateTodos
 
-
-
-
-
     }
 
 }
