@@ -3,6 +3,7 @@ import './style.scss'
 import InputTask from "./InputTask"
 import DisplayTask from "./DisplayTask"
 import TodoInfo from "./TodoInfo"
+import ExtraFeature from "./ExtraFeature"
 
 const MainContainer = () => {
 
@@ -11,8 +12,10 @@ const MainContainer = () => {
         <div className="container">
             <h3>Todo List</h3>
             <InputTask />
+            <ExtraFeature />
             <DisplayTask />
             <TodoInfo />
+
         </div>
     )
 }

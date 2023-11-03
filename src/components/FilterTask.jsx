@@ -17,7 +17,7 @@ const FilterTask = () => {
 
     return (
         <div>
-            <button style={{ width: '10vw',backgroundColor: "rgb(186, 181, 181)" }} onClick={toggleList}>Filter</button>
+            <button style={{ width: '7vw',backgroundColor: "rgb(186, 181, 181)" }} onClick={toggleList}>Filter</button>
             {
                 isOpen && (
                     <div className="drop-down">

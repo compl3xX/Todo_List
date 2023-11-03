@@ -58,6 +58,7 @@ input {
   justify-content: space-between;
   margin-top: 5px;
   border: 2px solid black;
+  padding: 1px 5px 2px 5px;
   background-color: grey;
   span {
     width: 200px;
@@ -83,24 +84,21 @@ input {
 }
 
 .drop-down {
-
   position: relative;
 
   div {
-
     position: absolute;
     top: 10px;
     overflow: hidden;
-    
+
     button {
       background-color: rgb(247, 234, 234);
-      
+
       width: 75px;
       padding: 1px;
       display: flex;
       justify-content: flex-start;
       margin-top: 5px;
-      
 
       &:hover {
         background-color: greenyellow;
@@ -112,4 +110,3 @@ input {
 .strikethrough {
   text-decoration: line-through;
 }
-
