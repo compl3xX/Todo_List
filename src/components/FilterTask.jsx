@@ -16,18 +16,20 @@ const FilterTask = () => {
 
 
     return (
-        <>
-            <button onClick={toggleList}>Filter</button>
+        <div>
+            <button style={{ width: '10vw',backgroundColor: "rgb(186, 181, 181)" }} onClick={toggleList}>Filter</button>
             {
                 isOpen && (
-                    <ul>
-                        <button onClick={() => { setFilter('ALL') }}>All</button>
-                        <button onClick={() => { setFilter('Completed') }}>Completed</button>
-                        <button onClick={() => { setFilter('Incomplete') }}>Incomplete</button>
-                    </ul>
+                    <div className="drop-down">
+                        <div>
+                            <button onClick={() => { setFilter('ALL') }}>All</button>
+                            <button onClick={() => { setFilter('Completed') }}>Completed</button>
+                            <button onClick={() => { setFilter('Incomplete') }}>Incomplete</button>
+                        </div>
+                    </div>
                 )
             }
-        </>
+        </div>
     )
 }
 
