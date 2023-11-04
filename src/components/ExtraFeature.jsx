@@ -19,7 +19,7 @@ function ExtraFeature() {
     }
 
     return (
-        <div>
+        <div className="extra-feature">
             <button onClick={CompAllTask}>Completed All Task </button>
             <button onClick={DeleteCompTask}>Delete Completed Task</button>
         </div>

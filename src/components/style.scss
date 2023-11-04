@@ -8,7 +8,7 @@
   align-items: center;
   max-width: 600px;
   padding: 5px;
-  background-color: rgb(194, 244, 168);
+  background-color: rgb(228, 227, 227);
 
   h3 {
     margin-top: 2vh;
@@ -102,6 +102,13 @@ input {
       }
     }
   }
+}
+
+.extra-feature {
+  margin-top: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .strikethrough {
