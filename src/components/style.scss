@@ -73,6 +73,9 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  input{
+    width: 60%;
+  }
 }
 
 .Todo-info {
@@ -137,7 +140,7 @@ input {
   .save-cancel {
         display: flex;
         button{
-          padding:5px
+          justify-content: space-around;
         }
   }
 }
