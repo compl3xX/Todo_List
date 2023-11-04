@@ -63,7 +63,7 @@ const EditTask = ({ item }) => {
                                 value={text}
                                 onChange={(e) => { setText(e.target.value) }}
                             />
-                            <div>
+                            <div className="save-cancel">
                                 <button onClick={() => { saveEdit(item.id) }}>Save</button>
                                 <button onClick={() => { cancelEdit(item.id) }}>Cancel</button>
                             </div>

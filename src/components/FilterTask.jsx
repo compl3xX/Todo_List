@@ -16,7 +16,7 @@ const FilterTask = () => {
 
 
     return (
-        <div>
+        <div className="FilterTask">
             <button style={{ width: '10vh', backgroundColor: "rgb(186, 181, 181)" }} onClick={toggleList}>Filter</button>
 
             {
